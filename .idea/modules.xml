@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/KakaoBase.iml" filepath="$PROJECT_DIR$/KakaoBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kakaoBase/app.iml" filepath="$PROJECT_DIR$/kakaoBase/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/app1.iml" filepath="$PROJECT_DIR$/demo/app1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kakaoBase/kakaoBase.iml" filepath="$PROJECT_DIR$/kakaoBase/kakaoBase.iml" />
+    </modules>
+  </component>
+</project>
