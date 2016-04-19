@@ -1,4 +1,4 @@
-package com.zhy.base.adapter.recyclerview.support;
+package com.kakao.adapter.recyclerview.support;
 
 /**
  * Created by zhy on 16/4/9.
