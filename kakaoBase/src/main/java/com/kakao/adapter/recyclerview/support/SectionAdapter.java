@@ -1,11 +1,11 @@
-package com.zhy.base.adapter.recyclerview.support;
+package com.kakao.adapter.recyclerview.support;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 
-import com.zhy.base.adapter.ViewHolder;
-import com.zhy.base.adapter.recyclerview.MultiItemCommonAdapter;
-import com.zhy.base.adapter.recyclerview.MultiItemTypeSupport;
+import com.kakao.adapter.ViewHolder;
+import com.kakao.adapter.recyclerview.MultiItemCommonAdapter;
+import com.kakao.adapter.recyclerview.MultiItemTypeSupport;
 
 import java.util.LinkedHashMap;
 import java.util.List;
