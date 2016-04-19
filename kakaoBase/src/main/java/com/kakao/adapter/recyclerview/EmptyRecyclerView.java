@@ -1,4 +1,4 @@
-package com.zhy.base.adapter.recyclerview;
+package com.kakao.adapter.recyclerview;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
