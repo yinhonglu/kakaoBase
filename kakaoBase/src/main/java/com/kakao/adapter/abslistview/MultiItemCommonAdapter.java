@@ -1,10 +1,10 @@
-package com.zhy.base.adapter.abslistview;
+package com.kakao.adapter.abslistview;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.zhy.base.adapter.ViewHolder;
+import com.kakao.adapter.ViewHolder;
 
 import java.util.List;
 
