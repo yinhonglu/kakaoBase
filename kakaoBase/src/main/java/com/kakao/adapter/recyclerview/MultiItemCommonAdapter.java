@@ -1,9 +1,9 @@
-package com.zhy.base.adapter.recyclerview;
+package com.kakao.adapter.recyclerview;
 
 import android.content.Context;
 import android.view.ViewGroup;
 
-import com.zhy.base.adapter.ViewHolder;
+import com.kakao.adapter.ViewHolder;
 
 import java.util.List;
 
