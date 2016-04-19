@@ -1,4 +1,4 @@
-package com.zhy.base.adapter.recyclerview;/*
+package com.kakao.adapter.recyclerview;/*
  * Copyright (C) 2014 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
