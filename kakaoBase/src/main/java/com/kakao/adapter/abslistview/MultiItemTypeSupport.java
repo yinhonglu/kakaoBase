@@ -1,4 +1,4 @@
-package com.zhy.base.adapter.abslistview;
+package com.kakao.adapter.abslistview;
 
 public interface MultiItemTypeSupport<T>
 {
