@@ -1,4 +1,4 @@
-package com.zhy.base.adapter.recyclerview;
+package com.kakao.adapter.recyclerview;
 
 public interface MultiItemTypeSupport<T>
 {
