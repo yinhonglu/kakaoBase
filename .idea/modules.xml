@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KakaoBase.iml" filepath="$PROJECT_DIR$/KakaoBase.iml" />
       <module fileurl="file://$PROJECT_DIR$/kakaoBase/app.iml" filepath="$PROJECT_DIR$/kakaoBase/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/demo/app1.iml" filepath="$PROJECT_DIR$/demo/app1.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/kakaoBase/kakaoBase.iml" filepath="$PROJECT_DIR$/kakaoBase/kakaoBase.iml" />
     </modules>

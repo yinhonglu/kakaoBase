@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
 
 
         TestService testService = RetrofitManager.builder().retrofit().create(TestService.class);
-        testService.getLatestNews();
+//        testService.getLatestNews();
         Call<NewsList> call = testService.getLatestNews();
         call.enqueue(new Callback<NewsList>() {
             @Override
