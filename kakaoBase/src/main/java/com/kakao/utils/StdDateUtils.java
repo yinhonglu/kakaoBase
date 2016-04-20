@@ -62,67 +62,126 @@ public final class StdDateUtils {
         return result == null ? new Date() : result;
     }
 
-
+    /**
+     * @return 当前时间的毫秒值
+     * E.g., at 10:04:15.250 PM the getMillSec() is 250.
+     */
     public static int getMillSec() {
         return getCalendar(getCurrentDate()).get(Calendar.MILLISECOND);
     }
 
+    /**
+     * @param date
+     * @return date时间的毫秒值
+     */
     public static int getMillSec(Date date) {
         return getCalendar(date).get(Calendar.MILLISECOND);
     }
 
+    /**
+     * @return 当前时间的秒值
+     * E.g., at 10:04:15.250 PM the getSec() is 15.
+     */
     public static int getSec() {
         return getCalendar(getCurrentDate()).get(Calendar.SECOND);
     }
 
+    /**
+     * @param date
+     * @return date时间的秒值
+     */
     public static int getSec(Date date) {
         return getCalendar(date).get(Calendar.SECOND);
     }
 
+    /**
+     * @return 当前时间的分钟值
+     * E.g., at 10:04:15.250 PM the getMin() is 4.
+     */
     public static int getMin() {
         return getCalendar(getCurrentDate()).get(Calendar.MINUTE);
     }
 
+    /**
+     * @param date
+     * @return date时间的分钟值
+     */
     public static int getMin(Date date) {
         return getCalendar(date).get(Calendar.MINUTE);
     }
 
+    /**
+     * @return 当前时间的小时值
+     * E.g., at 10:04:15.250 PM the getHour() is 22.
+     */
     public static int getHour() {
         return getCalendar(getCurrentDate()).get(Calendar.HOUR_OF_DAY);
     }
 
+    /**
+     * @param date
+     * @return date时间的小时值
+     */
     public static int getHour(Date date) {
         return getCalendar(date).get(Calendar.HOUR_OF_DAY);
     }
 
+    /**
+     * @return 当前时间的在当月的天数值
+     */
     public static int getDay() {
         return getCalendar(getCurrentDate()).get(Calendar.DAY_OF_MONTH);
     }
 
+    /**
+     * @param date
+     * @return date时间的在当月的天数值
+     */
     public static int getDay(Date date) {
         return getCalendar(date).get(Calendar.DAY_OF_MONTH);
     }
 
+    /**
+     * @return 当前时间在本年的周数
+     */
     public static int getWeek() {
         return getCalendar(getCurrentDate()).get(Calendar.WEEK_OF_YEAR);
     }
 
+    /**
+     * @param date
+     * @return date时间在本年的周数
+     */
     public static int getWeek(Date date) {
         return getCalendar(date).get(Calendar.WEEK_OF_YEAR);
     }
 
+    /**
+     * @return 当前时间在本年的第几天
+     */
     public static int getWeekDay() {
         return getCalendar(getCurrentDate()).get(Calendar.DAY_OF_WEEK);
     }
 
+    /**
+     * @param date
+     * @return date时间在本年的第几天
+     */
     public static int getWeekDay(Date date) {
         return getCalendar(date).get(Calendar.DAY_OF_WEEK);
     }
 
+    /**
+     * @return 今天是星期几，中文表示
+     */
     public static String getWeekDayCN() {
         return getWeekDayCN(getCurrentDate());
     }
 
+    /**
+     * @param date
+     * @return date时间是星期几，中文表示
+     */
     public static String getWeekDayCN(Date date) {
         String[] weekDays = {"周日", "周一", "周二", "周三", "周四", "周五", "周六"};
         int weekday = getWeekDay(date) - 1;
@@ -131,10 +190,17 @@ public final class StdDateUtils {
         return weekDays[weekday];
     }
 
+    /**
+     * @return 今天是星期几，英文表示
+     */
     public static String getWeekDayEN() {
         return getWeekDayCN(getCurrentDate());
     }
 
+    /**
+     * @param date
+     * @return date时间是星期几，英文表示
+     */
     public static String getWeekDayEN(Date date) {
         String[] weekDays = {"SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THRUSDAY", "FRIDAY", "SATURDAY"};
         int weekday = getWeekDay(date) - 1;
@@ -143,18 +209,32 @@ public final class StdDateUtils {
         return weekDays[weekday];
     }
 
+    /**
+     * @return 当前时间在本年的第几月
+     */
     public static int getMonth() {
         return (getCalendar(getCurrentDate()).get(Calendar.MONTH) + 1);
     }
 
+    /**
+     * @param date
+     * @return date时间在本年的第几月
+     */
     public static int getMonth(Date date) {
         return (getCalendar(date).get(Calendar.MONTH) + 1);
     }
 
+    /**
+     * @return 当前时间在的年份
+     */
     public static int getYear() {
         return getCalendar(getCurrentDate()).get(Calendar.YEAR);
     }
 
+    /**
+     * @param date
+     * @return date时间在的年份
+     */
     public static int getYear(Date date) {
         return getCalendar(date).get(Calendar.YEAR);
     }
@@ -181,47 +261,91 @@ public final class StdDateUtils {
         return (month.length() == 1 && withZeroFill) ? ("0" + month) : month;
     }
 
-
+    /**
+     * @param date
+     * @return calendar
+     */
     public static Calendar getCalendar(Date date) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
         return calendar;
     }
 
+    /**
+     * @return the current time in milliseconds since January 1, 1970 00:00:00.0 UTC.
+     */
     public static long getCurrentDateToLong() {
         return System.currentTimeMillis();
     }
 
+    /**
+     * @param date
+     * @return this date as a millisecond value.
+     */
     public static long getDateToLong(Date date) {
         return (date.getTime());
     }
 
+    /**
+     * @param time
+     * @return date
+     * Initializes this date instance using the specified millisecond value.
+     */
     public static Date getDateByLongTime(long time) {
         return (new Date(time));
     }
 
+    /**
+     * @return 当前时间yyyy-MM-dd HH:mm:ss时间格式的字符串表示
+     * E.g., 2016-04-19 14:42:48
+     */
     public static String getCurrentDateStr() {
         return getParseDateToStr(getCurrentDate(), DEFAUL_PARSE);
     }
 
+    /**
+     * @param date
+     * @return date时间yyyy-MM-dd HH:mm:ss时间格式的字符串表示
+     * E.g., 2016-04-19 14:42:48
+     */
     public static String getParseDateToStr(Date date) {
         return getParseDateToStr(date, DEFAUL_PARSE);
     }
 
+    /**
+     * @param date
+     * @param parsePattern
+     * @return date时间以不同parsePattern时间格式的字符串表示
+     * E.g., 2016-04-19 if parsePattern is yyyy-MM-dd.
+     */
     public static String getParseDateToStr(Date date, String parsePattern) {
         Locale locale = Locale.CHINA;
         SimpleDateFormat dataformat = new SimpleDateFormat(parsePattern, locale);
         return dataformat.format(date);
     }
 
+    /**
+     * @return 得到当前时间的Date对象
+     */
     public static Date getCurrentDate() {
         return new Date(System.currentTimeMillis());
     }
 
+    /**
+     * @param dateStr
+     * @return 得到dateStr字符表示时间的Date对象，
+     * dateStr格式为yyyy-MM-dd HH:mm:ss
+     */
     public static Date getDate(String dateStr) throws ParseException {
         return getDate(dateStr, DEFAUL_PARSE);
     }
 
+    /**
+     * @param dateStr
+     * @param parsePattern
+     * @return 得到dateStr字符表示时间的Date对象，
+     * dateStr格式为parsePattern表示
+     */
     public static Date getDate(String dateStr, String parsePattern)
             throws ParseException {
         Locale locale = Locale.CHINA;
@@ -230,6 +354,15 @@ public final class StdDateUtils {
         return date;
     }
 
+    /**
+     * @param year
+     * @param month
+     * @param day
+     * @param hour
+     * @param min
+     * @param sec
+     * @return 通过参数得到指定时间的Date对象
+     */
     public static Date getDate(int year, int month, int day, int hour, int min,
                                int sec) {
         Calendar calendar = Calendar.getInstance();
@@ -237,16 +370,30 @@ public final class StdDateUtils {
         return calendar.getTime();
     }
 
+    /**
+     * @param dateStr
+     * @return dateStr字符串表示的时间得到和最近时间比较后修饰词的表示
+     * dateStr格式为yyyy-MM-dd HH:mm:ss
+     */
     public static String getSpecialTime(String dateStr) throws ParseException {
         Date date = getDate(dateStr, DEFAUL_PARSE);
         return getSpecialTime(date);
     }
 
+    /**
+     * @param dateStr
+     * @return dateStr字符串表示的时间得到和最近时间比较后修饰词的表示
+     * dateStr格式为parsePattern表示
+     */
     public static String getSpecialTime(String dateStr, String parsePattern) throws ParseException {
         Date date = getDate(dateStr, parsePattern);
         return getSpecialTime(date);
     }
 
+    /**
+     * @param date
+     * @return date对象表示的时间得到和最近时间比较后修饰词的表示
+     */
     public static String getSpecialTime(Date date) {
         Date beforeDate = date;
         Date currentDate = getCurrentDate();
@@ -269,7 +416,11 @@ public final class StdDateUtils {
             return "刚刚";
         }
     }
-
+    /**
+     * @param startDate
+     * @param endDate
+     * @return startDate和endDate之间的天数
+     */
     public static int getGapDay(Date startDate, Date endDate) {
         Calendar fromCalendar = Calendar.getInstance();
         fromCalendar.setTime(startDate);
@@ -289,6 +440,9 @@ public final class StdDateUtils {
                 .getTime()) / (1000 * 60 * 60 * 24));
     }
 
+    /**
+     * 本类使用的例子和测试
+     */
     public static void usageAndTest() {
         String TAG = "StdDateUtils";
 
